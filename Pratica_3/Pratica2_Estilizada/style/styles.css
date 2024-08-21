@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #e2f7f1; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4db6ac; 
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #ffab40; 
+    padding: 10px 0;
+    border: 10px solid #4db6ac;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4db6ac;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 2. Estilo para ícones de validação em campos de formulário  não funciona ainda*/
+input:invalid::before {
+    content: "✖";
+    color: red; 
+    padding-left: 5px;
+}
+
+input:valid::after{
+    content: "✓";
+    color: #4db6ac; 
+    padding-left: 5px;
+}
+
+#codigo_cliente {
+    background-color: #56e2cd; 
+    border: 1px solid #4db6ac; 
+    padding: 5px;
+}
+
+.button {
+    background-color: #ffab40; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #ff8c00; 
+}
+
+main p {
+    line-height: 2;
+}
+
+input:focus + span {
+    color: #4db6ac; 
+    font-weight: bold;
+}
+
+a:link {
+    color: #4db6ac; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: black 
+}
+
+a:hover {
+    color: #ffab40; 
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff8c00; 
+}
+
+form:has(input:invalid) {
+    border: 2px solid #ff4d4d;
+}
+
+input:valid + span::after{
+    content: "a";
+    color: green 
+}
+
+input:valid + span::after{
+    content: "";
+    color: red   
+}
+
+:is(input, select, textarea) {
+    border-radius: 2px;
+}
+
+nav ul li:first-child {
+    font-weight: bold;
+}
+
+main h2:first-of-type {
+    border-bottom: 2px solid #4db6ac; /* Verde água */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
