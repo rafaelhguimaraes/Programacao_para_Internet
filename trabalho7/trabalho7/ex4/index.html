@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <form id="formCadastro">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario">
+            <span class="error" id="erroUsuario">O usuário deve ser preenchido</span>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+            <span class="error" id="erroSenha">A senha deve ser preenchida</span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span class="error" id="erroEmail">O email deve ser preenchido</span>
+
+            <div class="button-container">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
