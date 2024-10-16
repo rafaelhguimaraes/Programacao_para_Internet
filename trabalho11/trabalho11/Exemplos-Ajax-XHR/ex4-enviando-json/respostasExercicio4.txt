@@ -1,0 +1,12 @@
+a) Ao inserir a chave de acesso "123456" e o CEP "38400-100", o sistema retorna os dados do endereço correspondente. Ao mudar a chave de acesso, o resultado pode variar dependendo da lógica implementada no servidor.
+
+b) Diferenças principais:
+- O método de envio é POST no ex4.
+- O formato dos dados é JSON no ex4, enquanto no ex3 pode ser diferente.
+- O cabeçalho Content-Type é definido como application/json no ex4.
+
+i. xhr.responseType = 'json'; // Define que a resposta da requisição será automaticamente convertida para um objeto JSON.
+ii. xhr.setRequestHeader("Content-Type", "application/json"); // Define o cabeçalho Content-Type como application/json, informando ao servidor que o corpo da requisição contém um JSON.
+iii. xhr.send(JSON.stringify(objetoJS)); // Converte o objeto JavaScript (objetoJS) em uma string JSON e envia como corpo da requisição.
+
+c) Ao inserir o CEP 38400-100, o cabeçalho Content-Type será application/json e o Content-Length depende do tamanho do JSON enviado. Na aba Payload, será exibido o objeto JSON que foi enviado ao servidor.

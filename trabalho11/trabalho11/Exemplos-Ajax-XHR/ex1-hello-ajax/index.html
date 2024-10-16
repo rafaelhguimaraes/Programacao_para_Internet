@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Teste AJAX Simples</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.5rem;
+      background-image: url("images/bg2.jpg");
+      background-size: cover;
+      margin: 0;
+    }
+
+    main {
+      width: 60%;
+      background-color: #fff;
+      border: 0.5px solid #ccc;
+      margin: 0;
+      padding: 2% 4%;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main>
+    <h1>Faculdade de Computação da UFU</h1>
+    <p>A Faculdade de Computação (FACOM) da Universidade...</p>
+    <p>No início dos anos 2000 foi criado na Faculdade...</p>
+    <button>Carregar mais conteúdo com Ajax</button>
+  </main>
+
+  <script>
+    // Função que será chamada quando o botão for clicado
+    function loadExtraContent() {
+      // Cria um novo objeto XMLHttpRequest, que será usado para fazer a requisição HTTP
+      let xhr = new XMLHttpRequest();
+      
+      // Configura a requisição: método GET e o caminho para o arquivo de conteúdo adicional
+      xhr.open("GET", "conteudoAdicional.html", true);
+      
+      // Define o que será feito quando a requisição for concluída com sucesso (onload)
+      xhr.onload = function () {
+        // Seleciona o elemento <main> do documento HTML
+        const main = document.querySelector("main");
+        
+        // Insere o conteúdo retornado pela requisição (xhr.responseText) no final do elemento <main>
+        // O método insertAdjacentHTML permite inserir conteúdo HTML sem substituir o conteúdo existente
+        main.insertAdjacentHTML("beforeend", xhr.responseText);
+      };
+      
+      // Envia a requisição para o servidor
+      xhr.send();
+    }
+
+    // Seleciona o botão que será clicado para carregar o conteúdo extra
+    const button = document.querySelector("button");
+
+    // Adiciona um evento de clique ao botão, associando-o à função loadExtraContent
+    // Quando o botão for clicado, a função será executada e carregará o novo conteúdo via AJAX
+    button.addEventListener("click", loadExtraContent);
+
+  </script>
+  
+</body>
+
+</html>
